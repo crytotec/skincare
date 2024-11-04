@@ -1,0 +1,12 @@
+.mt{
+ margin-top: 20px;
+}
+a:hover{
+ color:#74B72E;
+ transition: color 0.5s;
+}
+
+.stroke{
+    -webkit-text-stroke: 0.2px #fff;
+    text-stroke:0.2px #fff;
+}
