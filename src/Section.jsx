@@ -1,4 +1,4 @@
-import lady from './lady.png';
+import lady from './image/lady.png';
 import LOGO from './image/LOGO.png';
 import takecare from './image/takecare.jpg';
 import nature from './image/nature.jpg';
