@@ -97,7 +97,7 @@ const Section = () => {
 
 
         {/* footer */}
-       <div className='relative mt container inset-0 flex flex-col '>
+       <div className='relative mt container inset-0 flex w-[95%] flex-col '>
        <img src={back} className='object-cover w-full h-[100px] '/>
        <div className='grid grid-cols-5 justify-between items-center md:gap-10 gap-2 absolute z-10'>
             <div className='-mt-[90px] ml-[10px] flex flex-col gap-1 justify-between items-center'>
@@ -136,8 +136,8 @@ const Section = () => {
              <form>
            <input 
            type="text" 
-          placeholder="Input Your E-mail" 
-        className="bg-[#F77F00] text-white font-bold placeholder-white  text-[10px] h-[15px] md:h-[20px] rounded pl-4 w-[80px] md:w-[100px] mr-4 ring-[#F77F00]"
+          placeholder="Input E-mail" 
+        className="bg-[#F77F00] text-white font-bold placeholder-white  text-[8px] h-[15px] md:h-[20px] rounded pl-2 w-[70px] md:w-[100px] mr-4 ring-[#F77F00]"
          />
          </form>
 
