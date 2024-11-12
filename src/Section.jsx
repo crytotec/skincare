@@ -75,7 +75,7 @@ const Section = () => {
      <div className='container '>
         <h1 className='text-[20px] text-[#74B72E] mt font-bold'>Shop By Categlories</h1>
         </div>
-        <div className='grid grid-cols-4 justify-between mt  items-center gap-2'>
+        <div className='grid md:grid-cols-4 grid-cols-2 justify-between mt  items-center gap-2'>
         {care.map((item, index) => (
         <div key={index} className="flex mx-[10px]">
           <div className="">
