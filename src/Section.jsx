@@ -6,14 +6,13 @@ import insta from './image/insta.png';
 import twit from './image/twit.png';
 import face from './image/face.png';
 import back from './image/back.jpg';
-
 import {items,care} from './component/Navitem.jsx';
 
 
 const Section = () => {
   return (
     <div>
-    <div className='container hidden inset-0 relative bg-[#F77F00] mt w-full h-[500px]  sm:flex md:flex-row flex-row justify-between items-center'>
+    <div className='container hidden inset-0 relative bg-[#F77F00] mt w-full md:h-[500px] h-[300px]  sm:flex md:flex-row flex-row justify-between items-center'>
      <div className='absolute z-10 left-0 -top-8'>
         <img src={LOGO} className='w-60 h-60 font-bold'/>
     </div>
@@ -37,7 +36,7 @@ const Section = () => {
         <img 
         src={lady} 
         alt="A description of the image" 
-        className="object-cover w-full h-[490px]"/>
+        className="object-cover w-full h-[390px] md:h-[490px]"/>
     </div>
     <div className='z-10 flex flex-col mx-1 flex-wrap   justify-between'>
         <h1 className='text-[33px]  font-extrabold text-[#74B72E]'><span className='stroke'>Natural Cosmetic.</span></h1>
@@ -45,33 +44,30 @@ const Section = () => {
         <a href=''className='text-white w-[200px] mr-[1px] mt text-center font-bold h-10 shadow-lg bg-[#74B72E]  rounded-full text-[23px] transform transition duration-500  hover:bg-white'>Download Now</a>
     </div>
         </div>
-        <div className='mt bg-white container'>
-      <h1 className='text-center text-[#74B72E] font-bold text-[20px] ml-[10px] md:text-[30px]'>Certified organic & natural ingredients</h1>
-    </div>
     <div className='relative container inset-0 flex flex-col-reverse sm:flex-row-reverse justify-between items-center gap-2'>
     <div className='z-10 left-4 top-2'>
         <img 
         src={takecare} 
         alt="A description of the image" 
-        className="object-cover w-full h-[490px]"/>
+        className="object-cover w-full md:h-[500px] h-[300px]"/>
     </div>
     <div className='grid md:grid-rows-2  justify-between -mt-5 mx-auto items-center gap-1'>
-        <h1 className='md:text-[30px] md:ml-[100px] ml-[10px] mt-4 text-[20px]  text-[#74B72E] font-bold'>A Full Line of Natural Cosmetic <br/>and Personal Care Products</h1>
-        <p className=' text-[#74B72E] md:-mt-4 mt-2  md:ml-[100px] ml-[10px] text-justify text-[10px] md:text-[15px]'>Discover a complete range of natural cosmetic and personal care products <br/> crafted with pure, eco-friendly ingredients. From skincare to haircare.<br/> 
+        <h1 className='text-[25px] md:ml-[100px] ml-[10px] mt-4  text-center  text-[#74B72E] font-bold'>A Full Line of Natural Cosmetic and Personal Care Products</h1>
+        <p className=' text-[#74B72E] md:-mt-4   md:ml-[100px] ml-[10px] text-center text-[10px] md:text-[15px]'>Discover a complete range of natural cosmetic and personal care products <br/> crafted with pure, eco-friendly ingredients. From skincare to haircare.<br/> 
         our products are designed to nourish, protect, and enhance your natural <br/> beauty, while being gentle on the environment. Embrace a clean,<br/>  green routine with our all-natural solutions.</p>
     </div>
     </div>
          <div className='flex mx-auto container justify-center items-center mt'>
             <h1 className='text-[#74B72E] text-center font-bold md:text-[30px] text-[20px]'>Shop Best Selling Organic Skincare <br/> products & Natural Cosmetics</h1>
          </div>
-          <h1 className='text-[#74B72E] font-bold mt-4 container text-[20px]'>Top Rated Products</h1>
+          <h1 className='text-[#74B72E] font-bold mt-4 container text-[15px]'>Top Rated Products</h1>
 
           <div className='grid grid-cols-3  justify-between items-center gap-2 container mt'>
        {items.map((item, index) => (
         <div key={index} className="">
           <div className="">
         <img src={item.image} alt={item.alt} />
-        <h1 className='text-[#74B72E] mt font-bold'>{item.desp}</h1>
+        <h1 className='text-[#74B72E] mt font-bold ml-2 text-[10px]'>{item.desp}</h1>
       </div>
     </div>
   ))}
@@ -84,7 +80,7 @@ const Section = () => {
         <div key={index} className="flex mx-[10px]">
           <div className="">
         <img src={item.image} alt={item.alt} />
-        <h1 className='text-[#74B72E] mt font-bold'>{item.desp}</h1>
+        <h1 className='text-[#74B72E] mt text-[10px] font-bold'>{item.desp}</h1>
       </div>
     </div>
   ))}
@@ -141,7 +137,7 @@ const Section = () => {
            <input 
            type="text" 
           placeholder="Input Your E-mail" 
-        className="bg-[#F77F00] text-white placeholder-white md:text-[8px] text-[5px] h-[10px] md:h-[20px] rounded pl-4 w-[80px] md:w-[100px] mr-4 ring-[#F77F00]"
+        className="bg-[#F77F00] text-white font-bold placeholder-white  text-[10px] h-[15px] md:h-[20px] rounded pl-4 w-[80px] md:w-[100px] mr-4 ring-[#F77F00]"
          />
          </form>
 

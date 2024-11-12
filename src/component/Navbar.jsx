@@ -24,10 +24,10 @@ const Navbar = () => {
         
         
         {/* Mobile Button */}
-        <div className='lg:hidden flex flex-row justify-center gap-4 items-center'>
+        <div className='lg:hidden  flex flex-row justify-center gap-4 items-center'>
         
         
-        <div className=' flex flex-col justify-center gap-2'>
+        <div className=' flex flex-col mx-8 justify-center gap-2'>
           <button onClick={toggleNavbar} className="text-white">
             {mobileOpen ? <X /> : <Menu />}
           </button>
