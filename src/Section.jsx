@@ -36,7 +36,7 @@ function Section() {
         <div className="flex flex-row justify-between w-[500px] lg:w-full max-w-[1200px] mx-auto">
           <img
             src={lady}
-            className="lg:w-[500px] lg:h-[500px] w-[200px] h-[200px]  absolute mt-[59px] lg:top-[-29px]"
+            className="lg:w-[600px] lg:h-[510px] w-[200px] h-[200px]  absolute mt-[59px] lg:top-[-29px]"
           />
           <div className="flex flex-col lg:p-0 p-10 lg:p-15 leading-relaxed mx-auto my-[90px] lg:my-[180px] lg:w-[300px] w-[300px]">
             <h1 className="text-[green] font-bold text-[0.8em] lg:text-[2em] shadoww-sm">
@@ -93,7 +93,7 @@ function Section() {
         </div>
       </div>
 
-      <div className="mx-auto w-[90%] lg:w-[68%] flex justify-between">
+      <div className="mx-auto w-[90%] lg:w-[70%] flex justify-between">
         <div className="flex flex-col gap-2">
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]"><strong>Address: </strong>No 20, lagos, Nigeria.</p>
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]"><strong>Phone No:</strong> +234908765443</p>
@@ -104,7 +104,7 @@ function Section() {
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">About Us</p>
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">Contact Us</p>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-5">
           <FaFacebook />
           <FaTwitter  />
           <FaInstagram  />
