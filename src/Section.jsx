@@ -36,13 +36,13 @@ function Section() {
         <div className="flex flex-row justify-between w-[500px] lg:w-full max-w-[1200px] mx-auto">
           <img
             src={lady}
-            className="lg:w-[500px] lg:h-[500px] w-[200px] h-[200px] absolute mt-[59px] lg:top-[-29px]"
+            className="lg:w-[500px] lg:h-[500px] w-[200px] h-[200px]  absolute mt-[59px] lg:top-[-29px]"
           />
-          <div className="flex flex-col lg:p-0 p-7 leading-relaxed mx-auto my-[100px] lg:my-[180px] lg:w-[300px] w-[200px]">
-            <h1 className="text-[green] font-bold text-[1em] lg:text-[2em] shadoww-sm">
+          <div className="flex flex-col lg:p-0 p-10 lg:p-15 leading-relaxed mx-auto my-[90px] lg:my-[180px] lg:w-[300px] w-[300px]">
+            <h1 className="text-[green] font-bold text-[0.8em] lg:text-[2em] shadoww-sm">
               Natural Cosmetic.
             </h1>
-            <p className="text-white lg:text-[1em] text-[0.6em]">
+            <p className="text-white lg:text-[1em] text-[0.55em]">
               Embrace your beauty with our organic, chemical-free products that nourish and enhance your skin naturally. Join us in celebrating sustainable beauty!
             </p>
           </div>
@@ -64,29 +64,29 @@ function Section() {
         </div>
       </div>
 
-      <div className="flex flex-row-reverse justify-between my-auto mx-auto w-[80%] mt-10">
-        <img src={skincare} className="lg:w-[400px] md:w-[200px] md:h-[200px] lg:h-[350px] w-[150px] h-[150px]" />
-        <div className="lg:my-20 lg:my-10 my-3 lg:p-10 p-2">
-          <h className="font-bold text-[0.9em] lg:text-[1.2em]">Natural Cosmetic and Personal Care Products</h>
+      <div className="flex flex-row-reverse gap-2 justify-between my-auto mx-auto w-[80%] mt-10">
+        <img src={skincare} className="lg:w-[400px] md:w-[200px] md:h-[200px] lg:h-[350px] w-[150px] h-[200px]" />
+        <div className="lg:my-20   my-10 lg:p-10 ">
+          <h className="font-bold text-[0.7em] lg:text-[1.2em]">Natural Cosmetic and Personal Care Products</h>
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.5em]">
             Embrace your beauty with our organic, chemical-free products that nourish and enhance your skin naturally. Join us in celebrating sustainable beauty!
           </p>
         </div>
       </div>
 
-      <div className="flex flex-row-reverse justify-between my-auto mx-auto w-[80%] mt-10">
-        <p className="lg:w-[500px] lg:p-10 p-2 md:p-10 lg:text-[1.0em] text-[0.5em]">
+      <div className="flex flex-row-reverse justify-between gap-2 mx-auto w-[80%] mt-10">
+        <p className="lg:w-[500px] lg:my-10 my-2 lg:p-10 md:p-10 lg:text-[1.0em] text-[0.5em]">
           Discover a complete range of natural cosmetic and personal care products <br />
           crafted with pure, eco-friendly ingredients. From skincare to haircare. <br />
           our products are designed to nourish, protect, and enhance your natural <br />
           beauty, while being gentle on the environment. Embrace a clean, <br /> green routine with our all-natural solutions.
         </p>
-        <img src={skincare1} className="lg:w-[400px] md:w-[200px] md:h-[200px] lg:h-[350px] w-[150px] h-[150px]" />
+        <img src={skincare1} className="lg:w-[400px] md:w-[200px] md:h-[200px] lg:h-[350px] w-[150px] h-[200px]" />
       </div>
 
       <div className="mt-5 flex flex-col">
         <h1 className="text-center p-4 text-[1em] lg:text-[2em] text-[green]">This is what Pure Essence has done</h1>
-        <div className="flex -mt-10 flex-row gap-5 mx-auto">
+        <div className="flex -mt-10 flex-row gap-2 mx-auto">
           <img className="lg:w-[300px] md:w-[150px] md:h-[150px] my-12 lg:h-[300px] w-[100px] h-[100px]" src={skincare2} />
           <img className="lg:w-[300px] md:w-[150px] md:h-[150px] my-12 lg:h-[300px] w-[100px] h-[100px]" src={skincare3} />
           <img className="lg:w-[300px] md:w-[150px] md:h-[150px] my-12 lg:h-[300px] w-[100px] h-[100px]" src={skincare} />
@@ -95,19 +95,19 @@ function Section() {
 
       <div className="mx-auto w-[90%] lg:w-[70%] flex justify-between">
         <div className="flex flex-col gap-2">
-          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]"><strong>Address: </strong>No 20, lagos, Nigeria.</p>
-          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]"><strong>Phone No:</strong> +234908765443</p>
-          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]"><strong>Address</strong>crytotec6666@gmail</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]"><strong>Address: </strong>No 20, lagos, Nigeria.</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]"><strong>Phone No:</strong> +234908765443</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]"><strong>Address</strong>crytotec6666@gmail</p>
         </div>
         <div className="flex flex-col gap-2">
-          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]">Home</p>
-          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]">About Us</p>
-          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]">Contact Us</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">Home</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">About Us</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">Contact Us</p>
         </div>
-        <div className="flex flex-col gap-5">
-          <FaFacebook />
-          <FaTwitter />
-          <FaInstagram />
+        <div className="flex flex-col gap-4">
+          <FaFacebook className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]" />
+          <FaTwitter className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]" />
+          <FaInstagram className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]" />
         </div>
       </div>
     </div>
