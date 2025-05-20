@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#F77F00] w-full shadow-md sticky top-0 z-50">
+    <nav className="bg-[#F77F00] w-[85%] mx-auto shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         {/* Logo */}
         <h1 className="text-white font-bold text-xl">Pure Essence</h1>
@@ -39,7 +39,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[#F77F00] px-4 py-4 space-y-2 flex flex-col items-start">
+        <div className="lg:hidden bg-[#F77F00] px-4 py-4 space-y-2  flex flex-col items-start">
           {navItems.map((item, index) => (
             <a
               key={index}
