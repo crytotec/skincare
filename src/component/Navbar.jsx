@@ -1,49 +1,57 @@
-  import { navItems } from './Navitem';
-import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { navItems } from './Navitem';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  
+
   const toggleNavbar = () => {
     setMobileOpen(!mobileOpen);
   };
 
   return (
-    <div>
-      <div className='container flex cursor-pointer flex-row justify-between items-center gap-2 mt opacity-100 bg-[#F77F00] lg:shadow-lg w-full h-full'>
-        <h1 className='font-semibold mx-10 text-white'>Pure Essence</h1>
-        <ul className='hidden lg:flex flex-row justify-center items-center mx-auto gap-10'>
+    <nav className="bg-[#F77F00] w-full shadow-md sticky top-0 z-50">
+      <div className="container mx-auto flex justify-between items-center px-4 py-3">
+        {/* Logo */}
+        <h1 className="text-white font-bold text-xl">Pure Essence</h1>
+
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex space-x-8">
           {navItems.map((item, index) => (
             <li key={index}>
-              <a href={item.href} className='text-white font-[10px]'>{item.label}</a>
+              <a
+                href={item.href}
+                className="text-white font-medium hover:text-yellow-100 transition"
+              >
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
 
-        
-        
         {/* Mobile Button */}
-        <div className='lg:hidden  flex flex-row justify-center gap-4 items-center'>
-        
-        
-        <div className=' flex flex-col mx-8 justify-center gap-2'>
+        <div className="lg:hidden">
           <button onClick={toggleNavbar} className="text-white">
-            {mobileOpen ? <X /> : <Menu />}
+            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
-        </div>
         </div>
       </div>
 
-      {/* Mobile Menu (to be displayed when mobileOpen is true) */}
+      {/* Mobile Menu */}
       {mobileOpen && (
-        <div className='lg:hidden flex flex-col items-center bg-[#F77F00] p-4'>
+        <div className="lg:hidden bg-[#F77F00] px-4 py-4 space-y-2 flex flex-col items-start">
           {navItems.map((item, index) => (
-            <a key={index} href={item.href} className='text-white py-2'>{item.label}</a>
+            <a
+              key={index}
+              href={item.href}
+              className="text-white text-base hover:text-yellow-100 transition"
+            >
+              {item.label}
+            </a>
           ))}
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
