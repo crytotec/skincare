@@ -1,8 +1,10 @@
-
+import Section from './Section.jsx'
+import Navbar from './component/Navbar.jsx'
 export default function App() {
   return (
-    <h1 className="text-xl font-bold underline text-red-800">
-    
-    </h1>
+    <div>
+      <Navbar />
+      <Section/>
+    </div>
   )
 }

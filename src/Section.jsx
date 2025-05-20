@@ -1,156 +1,117 @@
-import lady from './image/LADY.png';
-import LOGO from './image/LOGO.png';
-import takecare from './image/takecare.jpg';
-import nature from './image/nature.jpg';
-import insta from './image/insta.png';
-import twit from './image/twit.png';
-import face from './image/face.png';
-import back from './image/back.jpg';
-import {items,care} from './component/Navitem.jsx';
+import lady from './image/LADY.png'
+import perfume from './image/perfume.jpg'
+import perfume1 from './image/perfume1.jpg'
+import cream1 from './image/cream1.jpg'
+import cream2 from './image/cream2.jpg'
+import cream3 from './image/cream3.jpg'
+import { useState } from 'react'
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import skincare from './image/skincare.jpg'
+import skincare1 from './image/skincare1.jpg'
+import skincare2 from './image/skincare2.jpg'
+import skincare3 from './image/skincare3.jpg'
 
+function Section() {
+  const slide = [
+    { id: 1, img: perfume },
+    { id: 2, img: perfume1 },
+    { id: 3, img: cream1 },
+    { id: 4, img: cream2 },
+    { id: 5, img: cream3 },
+  ]
 
-const Section = () => {
+  const [slideset, Setslide] = useState(0)
+
+  const nextslide = () => {
+    Setslide((prev) => (prev + 1) % (slide.length - 2))
+  }
+
+  const prevslide = () => {
+    Setslide((prev) => (prev - 1 + slide.length) % (slide.length - 2))
+  }
+
   return (
     <div>
-    <div className='container hidden inset-0 relative bg-[#F77F00] mt w-full md:h-[500px] h-[300px]  sm:flex md:flex-row flex-row justify-between items-center'>
-     <div className='absolute z-10 left-0 -top-8'>
-        <img src={LOGO} className='w-60 h-60 font-bold'/>
-    </div>
-         <img 
-        src={lady} 
-        alt="A description of the image" 
-        className="mx-auto inline object-cover w-full h-full" 
-    />
-    <div className='z-10 sm:flex flex-col flex-wrap text-justify  mx-auto justify-between'>
-        <h1 className='text-[50px]  font-extrabold text-[#74B72E]'><span className='stroke'>Natural Cosmetic.</span></h1>
-       <p className='text-white sm:-w-1/4 -mt-2 text-[20px]'>Embrace your beauty with our organic, chemical-free products that nourish and enhance your skin naturally. Join us in celebrating sustainable beauty!</p>
-       <a href='' className='text-white w-[200px] mr-[1px] mt-2 text-center font-bold h-10 shadow-lg bg-[#74B72E] rounded-full text-[23px] transform transition duration-500 hover:bg-white hover:text-[#74B72E]'>
-  Download Now
-</a>
-
-    </div>
-        </div>
-        <div className='container sm:hidden inset-0 relative bg-[#F77F00] mt w-full h-[500px]  flex  flex-row justify-between items-center'>
-        <div className='z-10 left-4 top-2'>
-        <img src={LOGO} className='w-36 h-36 mt-6 left-0 font-bold absolute'/>
-        <img 
-        src={lady} 
-        alt="A description of the image" 
-        className="object-cover w-full h-[390px] md:h-[490px]"/>
-    </div>
-    <div className='z-10 flex flex-col mx-1 flex-wrap   justify-between'>
-        <h1 className='text-[33px]  font-extrabold text-[#74B72E]'><span className='stroke'>Natural Cosmetic.</span></h1>
-       <p className='text-white -mt-2 w-10/12 text-[12px] text-justify'>Embrace your beauty with our organic, chemical-free products that nourish and enhance your skin naturally. Join us in celebrating sustainable beauty!</p>
-        <a href=''className='text-white w-[200px] mr-[1px] mt text-center font-bold h-10 shadow-lg bg-[#74B72E]  rounded-full text-[23px] transform transition duration-500  hover:bg-white'>Download Now</a>
-    </div>
-        </div>
-    <div className='relative container inset-0 flex flex-col-reverse sm:flex-row-reverse justify-between items-center gap-2'>
-    <div className='z-10 left-4 top-2'>
-        <img 
-        src={takecare} 
-        alt="A description of the image" 
-        className="object-cover w-full md:h-[500px] h-[300px]"/>
-    </div>
-    <div className='grid md:grid-rows-2  justify-between -mt-5 mx-auto items-center gap-1'>
-        <h1 className='text-[25px] md:ml-[100px] ml-[10px] mt-4  text-center  text-[#74B72E] font-bold'>A Full Line of Natural Cosmetic and Personal Care Products</h1>
-        <p className=' text-[#74B72E] md:-mt-4   md:ml-[100px] ml-[10px] text-center text-[10px] md:text-[15px]'>Discover a complete range of natural cosmetic and personal care products <br/> crafted with pure, eco-friendly ingredients. From skincare to haircare.<br/> 
-        our products are designed to nourish, protect, and enhance your natural <br/> beauty, while being gentle on the environment. Embrace a clean,<br/>  green routine with our all-natural solutions.</p>
-    </div>
-    </div>
-         <div className='flex mx-auto container justify-center items-center mt'>
-            <h1 className='text-[#74B72E] text-center font-bold md:text-[30px] text-[20px]'>Shop Best Selling Organic Skincare <br/> products & Natural Cosmetics</h1>
-         </div>
-          <h1 className='text-[#74B72E] font-bold mt-4 container text-[15px]'>Top Rated Products</h1>
-
-          <div className='grid grid-cols-3  justify-between items-center gap-2 container mt'>
-       {items.map((item, index) => (
-        <div key={index} className="">
-          <div className="">
-        <img src={item.image} alt={item.alt} />
-        <h1 className='text-[#74B72E] mt font-bold ml-2 text-[10px]'>{item.desp}</h1>
-      </div>
-    </div>
-  ))}
-</div>
-     <div className='container '>
-        <h1 className='text-[20px] text-[#74B72E] mt font-bold'>Shop By Categlories</h1>
-        </div>
-        <div className='grid md:grid-cols-4 grid-cols-2 justify-between mt  items-center gap-2'>
-        {care.map((item, index) => (
-        <div key={index} className="flex mx-[10px]">
-          <div className="">
-        <img src={item.image} alt={item.alt} />
-        <h1 className='text-[#74B72E] mt text-[10px] font-bold'>{item.desp}</h1>
-      </div>
-    </div>
-  ))}
-        </div>
-
-
-        <div className='container relative inset-0 mt-2'>
-        <img src={nature} className='object-cover w-full h-[300px] '/>
-        <div className='absolute z-10 right-8 top-8 w-[200px] h-[200px] opacity-50 bg-white shadow-md'>
-          
+      <div className="bg-[#F77F00] w-[84%] mt-4 h-[250px] lg:h-[450px] mx-auto">
+        <div className="flex flex-row justify-between w-[500px] lg:w-full max-w-[1200px] mx-auto">
+          <img
+            src={lady}
+            className="lg:w-[500px] lg:h-[500px] w-[200px] h-[200px] absolute mt-[59px] lg:top-[-29px]"
+          />
+          <div className="flex flex-col lg:p-0 p-7 leading-relaxed mx-auto my-[100px] lg:my-[180px] lg:w-[300px] w-[200px]">
+            <h1 className="text-[green] font-bold text-[1em] lg:text-[2em] shadoww-sm">
+              Natural Cosmetic.
+            </h1>
+            <p className="text-white lg:text-[1em] text-[0.6em]">
+              Embrace your beauty with our organic, chemical-free products that nourish and enhance your skin naturally. Join us in celebrating sustainable beauty!
+            </p>
+          </div>
         </div>
       </div>
 
-
-
-        {/* footer */}
-       <div className='relative mt container inset-0 flex w-[95%] flex-col '>
-       <img src={back} className='object-cover w-full h-[100px] '/>
-       <div className='grid grid-cols-5 justify-between items-center md:gap-10 gap-2 absolute z-10'>
-            <div className='-mt-[90px] ml-[10px] flex flex-col gap-1 justify-between items-center'>
-            <h1 className='text-[20px] md:text-[30px} text-[#74B72E] font-bold'>Crytotec</h1>
-             <div className="flex flex-row justify-between items-center gap-2">
-           <a href=""><img src={face}/></a>
-           <a href=""><img src={twit}/></a>
-           <a href=""><img src={insta}/></a>
-             </div>
-             </div>
-             <div className='right-0 grid grid-row-5 md:mx-20 mx-5 text-[10px] md:text-[20px} justify-between items-center gap-2'>
-             <h1 className=' text-[#74B72E] font-bold'><a href="">Product</a></h1>
-             <p className=' text-[#74B72E] font-bold'><a href="">Skin Care</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Face</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Eye Care</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Cosmetic</a></p>
-             </div>
-
-             <div className='right-0 grid grid-row-5 md:mx-20 mx-5 text-[10px] md:text-[20px} justify-between items-center gap-2'>
-             <h1 className=' text-[#74B72E] font-bold'><a href="">About</a></h1>
-             <p className=' text-[#74B72E] font-bold'><a href="">Partnership</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Store</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Return Policy</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Contact Us</a></p>
-             </div>
-
-             <div className=' right-0 grid text-[10px] md:text-[20px} grid-row-5 md:mx-20 mx-5 justify-between items-center gap-2'>
-             <h1 className=' text-[#74B72E] font-bold'><a href="">Products</a></h1>
-             <p className=' text-[#74B72E] font-bold'><a href="">Help Desk</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Shipping</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Sales</a></p>
-             </div>
-
-             <div className='right-0 grid grid-row-5 md:mx-20  text-[10px] md:text-[20px} justify-between items-center gap-2'>
-             <h1 className=' text-[#74B72E] font-bold'><a href="">Newletters</a></h1>
-             <form>
-           <input 
-           type="text" 
-          placeholder="Input E-mail" 
-        className="bg-[#F77F00] text-white font-bold placeholder-white  text-[8px] h-[15px] md:h-[20px] rounded pl-2 w-[70px] md:w-[100px] mr-4 ring-[#F77F00]"
-         />
-         </form>
-
-             <p className=' text-[#74B72E] font-bold'><a href="">Eye Care</a></p>
-             <p className=' text-[#74B72E] font-bold'><a href="">Cosmetic</a></p>
-             </div>
-
-             </div>
+      <div>
+        <h1 className="text-center p-4 text-[1em] lg:text-[2em] text-[green]">These are what we sell</h1>
+        <div className="flex lg:gap-10 relative bg-[rgb(209,215,215)] gap-2 mx-auto justify-center p-2 lg:h-[400px] h-[200px] w-[80%]">
+          <div className="flex flex-row absolute justify-between right-2 left-2 top-1/2">
+            <FaArrowAltCircleLeft className="text-[green]" onClick={prevslide} />
+            <FaArrowAltCircleRight className="text-[green]" onClick={nextslide} />
+          </div>
+          {slide.slice(slideset, slideset + 3).map((item) => (
+            <div key={item.id}>
+              <img className="lg:w-[300px] my-12 lg:h-[300px] w-[100px] h-[100px]" src={item.img} />
             </div>
-       
+          ))}
         </div>
+      </div>
 
-  );
-};
+      <div className="flex flex-row-reverse justify-between my-auto mx-auto w-[80%] mt-10">
+        <img src={skincare} className="lg:w-[400px] md:w-[200px] md:h-[200px] lg:h-[350px] w-[150px] h-[150px]" />
+        <div className="lg:my-20 lg:my-10 my-3 lg:p-10 p-2">
+          <h className="font-bold text-[0.9em] lg:text-[1.2em]">Natural Cosmetic and Personal Care Products</h>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.5em]">
+            Embrace your beauty with our organic, chemical-free products that nourish and enhance your skin naturally. Join us in celebrating sustainable beauty!
+          </p>
+        </div>
+      </div>
 
-export default Section;
+      <div className="flex flex-row-reverse justify-between my-auto mx-auto w-[80%] mt-10">
+        <p className="lg:w-[500px] lg:p-10 p-2 md:p-10 lg:text-[1.0em] text-[0.5em]">
+          Discover a complete range of natural cosmetic and personal care products <br />
+          crafted with pure, eco-friendly ingredients. From skincare to haircare. <br />
+          our products are designed to nourish, protect, and enhance your natural <br />
+          beauty, while being gentle on the environment. Embrace a clean, <br /> green routine with our all-natural solutions.
+        </p>
+        <img src={skincare1} className="lg:w-[400px] md:w-[200px] md:h-[200px] lg:h-[350px] w-[150px] h-[150px]" />
+      </div>
+
+      <div className="mt-5 flex flex-col">
+        <h1 className="text-center p-4 text-[1em] lg:text-[2em] text-[green]">This is what Pure Essence has done</h1>
+        <div className="flex -mt-10 flex-row gap-5 mx-auto">
+          <img className="lg:w-[300px] md:w-[150px] md:h-[150px] my-12 lg:h-[300px] w-[100px] h-[100px]" src={skincare2} />
+          <img className="lg:w-[300px] md:w-[150px] md:h-[150px] my-12 lg:h-[300px] w-[100px] h-[100px]" src={skincare3} />
+          <img className="lg:w-[300px] md:w-[150px] md:h-[150px] my-12 lg:h-[300px] w-[100px] h-[100px]" src={skincare} />
+        </div>
+      </div>
+
+      <div className="mx-auto w-[90%] lg:w-[70%] flex justify-between">
+        <div className="flex flex-col gap-2">
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]"><strong>Address: </strong>No 20, lagos, Nigeria.</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]"><strong>Phone No:</strong> +234908765443</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]"><strong>Address</strong>crytotec6666@gmail</p>
+        </div>
+        <div className="flex flex-col gap-2">
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]">Home</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]">About Us</p>
+          <p className="lg:w-[500px] lg:text-[1.0em] text-[0.8em]">Contact Us</p>
+        </div>
+        <div className="flex flex-col gap-5">
+          <FaFacebook />
+          <FaTwitter />
+          <FaInstagram />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Section
