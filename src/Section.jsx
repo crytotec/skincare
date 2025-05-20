@@ -105,9 +105,9 @@ function Section() {
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">Contact Us</p>
         </div>
         <div className="flex flex-col gap-4">
-          <FaFacebook className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]" />
-          <FaTwitter className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]" />
-          <FaInstagram className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]" />
+          <FaFacebook />
+          <FaTwitter  />
+          <FaInstagram  />
         </div>
       </div>
     </div>
