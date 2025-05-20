@@ -93,7 +93,7 @@ function Section() {
         </div>
       </div>
 
-      <div className="mx-auto w-[90%] lg:w-[70%] flex justify-between">
+      <div className="mx-auto w-[90%] lg:w-[68%] flex justify-between">
         <div className="flex flex-col gap-2">
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]"><strong>Address: </strong>No 20, lagos, Nigeria.</p>
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]"><strong>Phone No:</strong> +234908765443</p>
@@ -104,7 +104,7 @@ function Section() {
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">About Us</p>
           <p className="lg:w-[500px] lg:text-[1.0em] text-[0.6em]">Contact Us</p>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           <FaFacebook />
           <FaTwitter  />
           <FaInstagram  />
